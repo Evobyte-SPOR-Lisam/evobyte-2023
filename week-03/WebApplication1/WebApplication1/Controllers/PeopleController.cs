@@ -27,6 +27,8 @@ namespace WebApplication1.Controllers
         [HttpGet("{id}")]
         public Person Get(Guid id)
         {
+            // sleep for 10 seconds
+            Thread.Sleep(10 * 1000);
             return people.FirstOrDefault(x => x.ID == id);
         }
 
